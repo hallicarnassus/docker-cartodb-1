@@ -9,13 +9,13 @@ defaults: &defaults
     csv_guessing:     true
   debug_assets: true
   mandatory_keys:     [layer_opts, sql_api, varnish_management, redis, session_domain]
-  session_domain:     'yourdomain.com'
+  session_domain:     '192.168.1.19'
   # If activated, urls will use usernames in format //SESSION_DOMAIN/user/USERNAME and ignore subdomains if present
   subdomainless_urls: true
   http_port:           # 3000 # nil|integer. HTTP port to use when building urls. Leave empty to use default (80)
   https_port:          # nil|integer. HTTPS port to use when building urls. Leave empty to use default (443)
   secret_token:       '71c2b25921b84a1cb21c71503ab8fb23'
-  account_host:       'yourdomain.com'
+  account_host:       '192.168.1.19'
   account_path:       '/account'
   vizjson_cache_domains: ['.localhost']
   data_library:
@@ -34,23 +34,23 @@ defaults: &defaults
       verifycert:     false
     private:
       protocol:      'https'
-      domain:        'yourdomain.com'
+      domain:        '192.168.1.19'
       port:          '443'
       verifycert:     false
     public:
       protocol:      'https'
-      domain:        'yourdomain.com'
+      domain:        '192.168.1.19'
       port:          '443'
       verifycert:     false
   sql_api:
     private:
       protocol:   'https'
-      domain:     'yourdomain.com'
+      domain:     '192.168.1.19'
       endpoint:   '/api/v2/sql'
       port:       443
     public:
       protocol:   'https'
-      domain:     'yourdomain.com'
+      domain:     '192.168.1.19'
       endpoint:   '/api/v2/sql'
       port:       443
   api_requests_service_url: ''
@@ -226,7 +226,7 @@ defaults: &defaults
       kind: "background"
       options: { color: '#ffffff' }
   cartodb_com_hosted: false
-  cartodb_central_domain_name: 'yourdomain.com'
+  cartodb_central_domain_name: '192.168.1.19'
   aws:
     s3:
       access_key_id: "test"
